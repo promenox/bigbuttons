@@ -1,0 +1,62 @@
+body {
+    text-align: center;
+}
+
+h1 {
+    font-size: 5em;
+    color: black
+}
+
+
+#blueButton {
+    font-size: 4em;
+    padding: 3% 5%;
+    min-height: 150px;
+    background-color: rgb(112, 214, 254);
+    color: black;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    cursor: pointer;
+}
+
+#blueButton:hover {
+    background-color: rgb(57, 184, 249);
+    color: white;
+}
+
+#blueButton:active {
+    background-color: rgb(57, 184, 249);
+    color: white;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#redButton {
+    font-size: 4em;
+    padding: 3% 5%;
+    min-height: 150px;
+    background-color: rgb(254, 112, 112);
+    color: black;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    cursor: pointer;
+}
+
+#redButton:hover {
+    background-color: rgb(249, 57, 57);
+    color: white;
+}
+
+#redButton:active {
+    background-color: rgb(249, 57, 57);
+    color: white;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+p {
+    font-size: 1.8em;
+    margin-top: 2%;
+}

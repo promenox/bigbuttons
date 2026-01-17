@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Big Buttons</title>
+        <link rel="stylesheet" href="./static/style.css">
+        <link rel="icon" type="image/x-icon" href="./static/favicon2.ico">
+    </head>
+    <body>
+        <h1>The Big Buttons</h1>
+        <!-- <button type="button" onclick="alert('Hi Wlrd!')">Click Me!</button> -->
+
+        <button id="redButton" type="button">Big Red!</button>
+        <div id="redCount">
+            <p>Count: <span id="redValue">{{ initialRed }}</span></p>
+        </div>
+
+        <button id="blueButton" type="button">Big Blue!</button>
+        <div id="blueCount">
+            <p>Count: <span id="blueValue">{{ initialBlue }}</span></p>
+        </div>
+
+        <script src="./static/buttonClick.js"></script>
+    </body>
+</html>
