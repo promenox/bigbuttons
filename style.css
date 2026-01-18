@@ -3,60 +3,73 @@ body {
 }
 
 h1 {
-    font-size: 5em;
-    color: black
+    font-size: clamp(2rem, 10vw, 9rem);
+    color: black;
+    margin-top: min(2vh, 50px);
+    margin-bottom: min(2vh, 50px);
 }
 
+p {
+    font-size: clamp(1.2rem, 10vw, 3rem);
+    margin-top: min(2vh, 50px);
+    margin-bottom: min(2vh, 50px);
+}
 
-#blueButton {
-    font-size: 4em;
+/* base button styles - all devices */
+.btn {
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
     padding: 3% 5%;
-    min-height: 150px;
-    background-color: rgb(112, 214, 254);
-    color: black;
+    min-height: 150px; 
+    height: 25vh;
+    max-height: 650px;
+    min-width: 350px;
+    width: 50vw;
+    max-width: 950px;
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #999;
     cursor: pointer;
+    transition: background-color 0.2s; /* smoother color transitions */
+    -webkit-tap-highlight-color: transparent; /* rmv gray box mobile */
 }
 
-#blueButton:hover {
-    background-color: rgb(57, 184, 249);
+#blueButton {
+    background-color: rgb(112, 214, 254);
+    color: black;
+}
+
+#redButton {
+    background-color: rgb(254, 112, 112);
+    color: black;
+}
+
+/* HOVER: applied to devices with a mouse (prevents mobile sticking) */
+@media (hover: hover) {
+    #blueButton:hover {
+        background-color: rgb(57, 184, 249);
+        color: white;
+    }
+    #redButton:hover {
+        background-color: rgb(249, 57, 57);
+        color: white;
+    }
+}
+
+/* ACTIVE: works on both mobile tap and desktop click */
+#blueButton:active, #redButton:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
     color: white;
 }
 
 #blueButton:active {
     background-color: rgb(57, 184, 249);
-    color: white;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-}
-
-#redButton {
-    font-size: 4em;
-    padding: 3% 5%;
-    min-height: 150px;
-    background-color: rgb(254, 112, 112);
-    color: black;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
-    cursor: pointer;
-}
-
-#redButton:hover {
-    background-color: rgb(249, 57, 57);
-    color: white;
 }
 
 #redButton:active {
     background-color: rgb(249, 57, 57);
-    color: white;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-}
-
-p {
-    font-size: 1.8em;
-    margin-top: 2%;
 }

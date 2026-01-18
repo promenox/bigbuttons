@@ -1,6 +1,7 @@
 # fastapi module
 # https://fastapi.tiangolo.com/#create-it
 from fastapi import FastAPI
+from fastapi import HTTPException
 from fastapi.templating import Jinja2Templates
 from fastapi import Request
 from fastapi import Body
@@ -8,19 +9,19 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 
 # mongodb module
-
 from pymongo import MongoClient
 
-# os module
+# dotenv module
 from dotenv import load_dotenv
+
+# os module
 import os
 
 # ---- MongoDB ----
 # looks for env declaration or returns default 
 # https://note.nkmk.me/en/python-os-environ-getenv/#osenvironget
 
-
-load_dotenv() # This pulls the variables from your .env file
+load_dotenv() # this pulls the variables from your .env file
 MONGO_URI = os.getenv("MONGO_URI")
 
 # declaring fastapi app
@@ -143,4 +144,4 @@ async def save_test():
 if __name__ == "__main__":
     import uvicorn
 
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=8000)

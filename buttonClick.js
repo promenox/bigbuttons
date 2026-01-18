@@ -9,7 +9,7 @@ function handleActivity() {
     // only start a new timer if there is "shit" in the buffer
     if (redBufferBucket > 0 || blueBufferBucket > 0) {
         inactivityTimer = setTimeout(() => {
-            console.log("Inactivity sync triggered.");
+            // console.log("Inactivity sync triggered.");
             
             // check buffer again before firing because individually seperate
             if (redBufferBucket > 0) incRedServerPoll();
@@ -34,7 +34,7 @@ window.setInterval( () => {
 // i am not using this rn -->
 document.addEventListener('DOMContentLoaded', async () => {
 // OR document.addEventListener('DOMContentLoaded', async function() {
-    console.log('DOM has loaded!');    
+    // console.log('DOM has loaded!');    
     pollServerCounts() 
     // code...
 });
