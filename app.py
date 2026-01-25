@@ -41,7 +41,8 @@ client = MongoClient(MONGO_URI)
 
 # ~~~ testing w/ terminal ~~~
 # CONNECT -->
-# mongosh "mongodb+srv://bigbutton.2m5mout.mongodb.net/" --apiVersion 1 --username kimber --password 'os7687te$t'
+# Don't push passwords to repos! Change placeholders. :)
+# mongosh "mongodb+srv://bigbutton.2m5mout.mongodb.net/" --apiVersion 1 --username 'USERNAME' --password 'PASSWORD'
 # 
 # > show dbs(shows avalible dbs - test is default)
 # 
